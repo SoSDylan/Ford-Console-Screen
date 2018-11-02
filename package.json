@@ -1,0 +1,19 @@
+{
+  "name": "fordapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-css": "node-sass --include-path scss sass/style.sass css/style.css"
+  },
+  "author": "Dylan Larsen",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^3.0.6"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.4",
+    "nodemon": "^1.18.5"
+  }
+}

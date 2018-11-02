@@ -1,0 +1,31 @@
+.bottom-navigation
+	width: 100vw
+	height: 100px
+	background-color: #000
+	text-align: center
+	z-index: 100
+
+	.nav-item
+		width: calc(90% / 5)
+		height: 100%
+		display: inline-block
+		vertical-align: top
+		text-align: center
+
+		svg
+			fill: #ccc
+			width: 50px
+			height: 50px
+			margin: 23px 0
+
+	div:hover
+		svg
+			fill: #fff
+
+.floating
+	position: absolute
+
+	&.volume
+		bottom: 115px
+		right: 5%
+		display: none

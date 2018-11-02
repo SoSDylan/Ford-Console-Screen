@@ -1,0 +1,42 @@
+.music
+	z-index: 50
+
+	.music-contents
+		padding: 0
+
+		.controls
+			height: 120px
+
+			img
+				width: 120px
+				height: 120px
+
+			input[type=range]
+				top: 90px
+				left: 140px
+				position: absolute
+				width: calc(100% - 140px - 500px)
+
+			.song-name
+				position: absolute
+				left: 142px
+				top: 20px
+				font-weight: 700
+				font-size: 15pt
+
+			.song-artist
+				position: absolute
+				left: 142px
+				top: 52px
+				font-weight: 400
+				font-size: 14pt
+
+	.whitespace
+		height: 16px
+
+.floating
+	&.music
+		bottom: 84px
+		left: 10%
+		right: 10%
+		max-width: unset
