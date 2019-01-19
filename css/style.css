@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa:300,400,700");
 body {
   margin: 0;
-  font-family: 'Comfortaa', sans-serif; }
+  padding: 0;
+  font-family: 'Comfortaa', sans-serif;
+  user-select: none; }
 
 .contents {
   width: 100vw;
@@ -14,7 +16,9 @@ body {
   height: 100px;
   background-color: #000;
   text-align: center;
-  z-index: 100; }
+  z-index: 100;
+  position: absolute;
+  bottom: 0; }
   .bottom-navigation .nav-item {
     width: calc(90% / 5);
     height: 100%;
@@ -36,15 +40,17 @@ body {
     right: 5%;
     display: none; }
 
-body {
-  margin: 0; }
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 100px;
+  width: 100%; }
 
-div#map {
-  width: 100vw;
-  flex: 1; }
+.mapboxgl-ctrl-attrib {
+  display: none !important; }
 
-.mk-logo-control, .mk-legal {
-  display: none; }
+.mapboxgl-ctrl-logo {
+  display: none !important; }
 
 .music {
   z-index: 50; }

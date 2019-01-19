@@ -3,12 +3,17 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Ford</title>
+		<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
 		<link href="css/style.css" rel="stylesheet">
 		<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 
 		<!-- Maps -->
-		<script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js" type="text/javascript"></script>
+		<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js"></script>
+		<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css" rel="stylesheet" />
+		<link href="css/map-plugins/mapbox-gl-controls.css" rel="stylesheet">
+		<link href="css/map-plugins/mapbox-gl-traffic.css" rel="stylesheet">
+		<link href="css/map-plugins/mapbox-gl-directions.css" rel="stylesheet">
 		<!-- End Maps -->
 	</head>
 	<body>
@@ -66,21 +71,11 @@
 		</div>
 
 		<!-- Maps -->
-		<script type="text/javascript">
-			mapkit.init({
-				authorizationCallback: function(done) {
-					done('eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFDOU05NjVYWloifQ.eyJpc3MiOiJLVVpCUUdCQjM1IiwiaWF0IjoxNTQwNzEzMTkwLCJleHAiOjEyNjUxODI0MzAxfQ.83lRtpxhBxweiVKnpRigJ9f6GfbUC9um08Rb0ldRqx0OjgJP_ho2nw8Tp08MFbRWgki9d87woLVRx1aCLdKb_A');
-				}
-			});
-
-			var mornpen = new mapkit.CoordinateRegion(
-				new mapkit.Coordinate(-38.4, 144.9),
-				new mapkit.CoordinateSpan(0.167647972, 0.354985255)
-			);
-
-			var map = new mapkit.Map("map");
-			map.region = mornpen;
-		</script>
+		<script src="js/map-plugins/mapbox-gl-controls/mapbox-gl-directions.js"></script>
+		<script src="js/map-plugins/mapbox-gl-controls/mapbox-gl-zoom.js"></script>
+		<script src="js/map-plugins/mapbox-gl-controls/mapbox-gl-compass.js"></script>
+		<script src="js/map-plugins/mapbox-gl-traffic.js"></script>
+		<script src="js/maps.js"></script>
 		<!-- End Maps -->
 	</body>
 </html>

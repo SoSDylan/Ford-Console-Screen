@@ -2,15 +2,17 @@
   "name": "fordapp",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
-    "start": "electron .",
+    "start": "node-sass --include-path scss sass/style.sass css/style.css & electron .",
     "build-css": "node-sass --include-path scss sass/style.sass css/style.css"
   },
   "author": "Dylan Larsen",
   "license": "ISC",
   "dependencies": {
-    "electron": "^3.0.6"
+    "@mapbox/mapbox-gl-traffic": "^1.0.2",
+    "electron": "^3.0.6",
+    "mapbox-gl": "^0.52.0"
   },
   "devDependencies": {
     "node-sass": "^4.9.4",
