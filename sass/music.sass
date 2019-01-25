@@ -1,6 +1,19 @@
 .music
 	z-index: 50
 
+	.grabber
+		position: absolute
+		width: 70vw
+		height: 50px
+		left: 15vw
+
+		.grabber-design
+			position: absolute
+			top: 36px
+			left: calc(50% - 35px)
+			width: 80px
+			height: 5px
+
 	.music-contents
 		padding: 0
 
@@ -30,6 +43,22 @@
 				top: 52px
 				font-weight: 400
 				font-size: 14pt
+		
+		.soundcloud
+			width: 100%
+			height: 48px
+			&.disabled
+				display: none
+			&.expanded
+				height: 80vh
+		
+		.spotify
+			width: 100%
+			height: 90px
+			&.disabled
+				display: none
+			&.expanded
+				height: 80vh
 
 	.whitespace
 		height: 16px
@@ -40,3 +69,11 @@
 		left: 10%
 		right: 10%
 		max-width: unset
+
+
+// SoundCloud
+.playControls__volume
+	display: none
+
+.playbackSoundBadge__actions
+	display: none

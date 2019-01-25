@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/SoSDylan/Ford-Console-Screen.git"
+  },
   "scripts": {
     "start": "node-sass --include-path scss sass/style.sass css/style.css & electron .",
     "build-css": "node-sass --include-path scss sass/style.sass css/style.css"

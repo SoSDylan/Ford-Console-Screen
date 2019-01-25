@@ -8,10 +8,15 @@
 		<link href="css/style.css" rel="stylesheet">
 		<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 
+		<!-- jQuery -->
+		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script>if (window.module) module = window.module;</script>
+		<!-- End jQuery -->
+
 		<!-- Maps -->
-		<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js"></script>
-		<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css" rel="stylesheet" />
-		<link href="css/map-plugins/mapbox-gl-controls.css" rel="stylesheet">
+		<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js"></script>
+		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
 		<link href="css/map-plugins/mapbox-gl-traffic.css" rel="stylesheet">
 		<link href="css/map-plugins/mapbox-gl-directions.css" rel="stylesheet">
 		<!-- End Maps -->
@@ -24,14 +29,22 @@
 
 			<!-- Music -->
 			<div class="music">
+				<!-- <a onclick="expandMusic()" class="expand-music">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 451.8 451.8"><path d="M248.3 106.4l194.3 194.3c12.4 12.4 12.4 32.4 0 44.7 -12.4 12.4-32.4 12.4-44.7 0L225.9 173.5 54 345.4c-12.4 12.4-32.4 12.4-44.7 0 -12.4-12.4-12.4-32.4 0-44.7L203.6 106.4c6.2-6.2 14.3-9.3 22.4-9.3C234 97.1 242.1 100.2 248.3 106.4z" /></svg>
+				</a> -->
+				<div class="grabber">
+					<div class="bg-white shadow-lg rounded-lg overflow-hidden grabber-design"></div>
+				</div>
 				<div class="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden floating music">
-					<div class="sm:flex sm:items-center px-6 py-4 music-contents">
-						<div class="controls">
+					<div class="sm:flex sm:items-center px-6 py-4 music-contents" draggable="true" ondrag="expandMusic(event)">
+						<!-- <div class="controls">
 							<img src="images/album-cover-test.jpg">
 							<span class="song-name">PRBLMS</span>
 							<span class="song-artist">6LACK</span>
 							<input type="range" min="0" max="100" value="25" name="music-timecode">
-						</div>
+						</div> -->
+						<iframe id="soundcloud" class="soundcloud" src="https://soundcloud.com" frameborder="0" scrolling="no"></iframe>
+						<iframe id="spotify" class="spotify disabled" src="https://open.spotify.com/user/sos_dylan" frameborder="0"></iframe>
 					</div>
 					<div class="whitespace"></div>
 				</div>
@@ -70,12 +83,20 @@
 			<!-- End Navigation Bar -->
 		</div>
 
+		<!-- jQuery -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<!-- End jQuery -->
+
 		<!-- Maps -->
-		<script src="js/map-plugins/mapbox-gl-controls/mapbox-gl-directions.js"></script>
-		<script src="js/map-plugins/mapbox-gl-controls/mapbox-gl-zoom.js"></script>
-		<script src="js/map-plugins/mapbox-gl-controls/mapbox-gl-compass.js"></script>
+		<script src="js/map-plugins/mapbox-gl-directions.js"></script>
+		<!-- <script src="js/map-plugins/mapbox-gl-zoom.js"></script>
+		<script src="js/map-plugins/mapbox-gl-compass.js"></script> -->
 		<script src="js/map-plugins/mapbox-gl-traffic.js"></script>
 		<script src="js/maps.js"></script>
 		<!-- End Maps -->
+
+		<!-- Music -->
+		<script src="js/music.js"></script>
+		<!-- End Music -->
 	</body>
 </html>
