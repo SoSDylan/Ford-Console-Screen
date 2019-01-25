@@ -19,10 +19,6 @@ app.on('ready', function() {
 
 	main.setFullScreen(true);
 
-	// Build menu from template
-	const menu = Menu.buildFromTemplate(menuTemplate);
-	Menu.setApplicationMenu(menu);
+	// Disable menu
+	main.setMenu(null);
 });
-
-// Create menu template
-const menuTemplate = [];
